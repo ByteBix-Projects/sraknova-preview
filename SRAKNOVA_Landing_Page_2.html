@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRAKNOVA Workforce Solution Pvt Ltd | Private Security Services Jharkhand</title>
+<meta name="description" content="SRAKNOVA Workforce Solution — Professional private security and workforce management services across Jharkhand. Manned guarding, industrial security, 24x7 operations. Contact: 9507933579">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A227;
+  --gold-dark:#9E7D1A;
+  --gold-light:#F5D06A;
+  --navy:#0A0E1A;
+  --navy-mid:#121828;
+  --steel:#1E3A5F;
+  --steel-light:#2A5080;
+  --white:#F8F6F0;
+  --gray:#9BA3B0;
+  --gray-light:#D4D8DF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s;backdrop-filter:blur(0px)}
+nav.scrolled{background:rgba(10,14,26,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,39,.2);padding:14px 5%}
+.nav-logo{display:flex;flex-direction:column}
+.nav-logo span:first-child{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:var(--gold);line-height:1}
+.nav-logo span:last-child{font-size:10px;letter-spacing:4px;color:var(--gray);text-transform:uppercase}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.btn-gold{background:var(--gold);color:var(--navy);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:11px 24px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-outline{border:1px solid var(--gold);color:var(--gold);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;background:transparent;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s}
+.btn-outline:hover{background:rgba(201,162,39,.1)}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 5% 80px;overflow:hidden;gap:60px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(105deg,#0A0E1A 0%,#0A0E1A 52%,#0D1930 100%);z-index:0}
+.hero-pattern{position:absolute;inset:0;z-index:1;opacity:.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(201,162,39,.5) 40px,rgba(201,162,39,.5) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(201,162,39,.5) 40px,rgba(201,162,39,.5) 41px)}
+.hero-img-side{position:relative;z-index:2;display:flex;align-items:center;justify-content:flex-end}
+.hero-img-frame{position:relative;width:100%}
+.hero-img-frame img{width:100%;height:auto;display:block;border-left:4px solid var(--gold)}
+.hero-img-frame::before{content:'';position:absolute;top:-12px;right:-12px;bottom:-12px;left:-4px;border:1px solid rgba(201,162,39,.25);pointer-events:none;z-index:-1}
+.hero-img-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,#0A0E1A 0%,transparent 18%);z-index:1;pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:620px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,162,39,.4);padding:6px 16px;margin-bottom:28px;font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,110px);line-height:.95;letter-spacing:2px;margin-bottom:12px}
+.hero h1 span{color:var(--gold);display:block}
+.hero-line{width:80px;height:3px;background:var(--gold);margin:28px 0}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--gray-light);font-weight:300;line-height:1.6;margin-bottom:40px;max-width:560px;letter-spacing:.3px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:60px}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap}
+.stat-item{display:flex;flex-direction:column;gap:4px}
+.stat-num{font-family:'Oswald',sans-serif;font-size:32px;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:11px;letter-spacing:2px;color:var(--gray);text-transform:uppercase}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--gray);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollline 1.8s ease-in-out infinite}
+@keyframes scrollline{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* TRUST BAR */
+.trust-bar{background:var(--gold);padding:18px 5%;display:flex;justify-content:center;gap:clamp(20px,4vw,60px);flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--navy);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.trust-icon{font-size:18px}
+
+/* SECTIONS */
+section{padding:100px 5%}
+.section-label{font-size:11px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.section-label::before{content:'';width:30px;height:1px;background:var(--gold)}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,5vw,64px);letter-spacing:2px;line-height:1;margin-bottom:20px}
+.section-title em{color:var(--gold);font-style:normal}
+.section-sub{font-size:17px;color:var(--gray);font-weight:300;line-height:1.7;max-width:600px}
+.gold-rule{width:60px;height:2px;background:var(--gold);margin:24px 0}
+
+/* ABOUT */
+.about{background:var(--navy-mid)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:60px}
+.about-img-wrap{position:relative}
+.about-frame{width:100%;aspect-ratio:3/4;background:var(--steel);position:relative;overflow:hidden}
+.about-frame-inner{width:100%;height:100%;background:linear-gradient(to bottom right,#1E3A5F,#0A0E1A);display:flex;align-items:center;justify-content:center}
+.about-frame-inner svg{width:55%;opacity:.35}
+.frame-accent{position:absolute;bottom:-16px;right:-16px;width:80%;height:80%;border:2px solid var(--gold);z-index:-1}
+.frame-badge{position:absolute;top:20px;left:-20px;background:var(--gold);color:var(--navy);padding:16px 20px;font-family:'Bebas Neue',sans-serif;font-size:36px;line-height:1;text-align:center}
+.frame-badge small{display:block;font-family:'Source Sans 3',sans-serif;font-size:9px;letter-spacing:2px;font-weight:600}
+.about-points{display:flex;flex-direction:column;gap:28px;margin-top:40px}
+.about-point{display:flex;gap:20px;align-items:flex-start}
+.point-icon{width:48px;height:48px;flex-shrink:0;border:1px solid rgba(201,162,39,.3);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold)}
+.point-text h4{font-family:'Oswald',sans-serif;font-size:16px;letter-spacing:1px;margin-bottom:6px;color:var(--white)}
+.point-text p{font-size:14px;color:var(--gray);line-height:1.6}
+
+/* SERVICES */
+.services{background:var(--navy)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;margin-top:60px}
+.service-card{background:var(--navy-mid);padding:40px 32px;border-bottom:3px solid transparent;transition:all .4s;cursor:default;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover{background:#111827;transform:translateY(-4px)}
+.svc-icon{font-size:40px;margin-bottom:24px;display:block;color:var(--gold);opacity:.8}
+.svc-num{font-family:'Bebas Neue',sans-serif;font-size:64px;color:rgba(201,162,39,.06);position:absolute;right:24px;top:16px;line-height:1}
+.svc-title{font-family:'Oswald',sans-serif;font-size:20px;letter-spacing:1px;margin-bottom:12px;color:var(--white)}
+.svc-desc{font-size:14px;color:var(--gray);line-height:1.7}
+
+/* WHY US */
+.why{background:var(--steel);position:relative;overflow:hidden}
+.why::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;border:1px solid rgba(201,162,39,.1);border-radius:50%}
+.why::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;border:1px solid rgba(201,162,39,.08);border-radius:50%}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:60px;position:relative;z-index:1}
+.why-card{background:rgba(10,14,26,.6);border:1px solid rgba(201,162,39,.15);padding:36px 32px;position:relative}
+.why-card::before{content:attr(data-num);font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(201,162,39,.08);position:absolute;top:8px;right:16px;line-height:1}
+.why-icon{width:52px;height:52px;background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.3);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--gold);margin-bottom:20px}
+.why-card h3{font-family:'Oswald',sans-serif;font-size:18px;letter-spacing:1px;margin-bottom:10px}
+.why-card p{font-size:14px;color:var(--gray-light);line-height:1.7}
+
+/* PROCESS */
+.process{background:var(--navy-mid)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;position:relative}
+.process-steps::before{content:'';position:absolute;top:52px;left:16.66%;right:16.66%;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.step{text-align:center;padding:0 32px}
+.step-circle{width:104px;height:104px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;background:var(--navy-mid);position:relative;z-index:1}
+.step-num{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--gold)}
+.step h3{font-family:'Oswald',sans-serif;font-size:18px;letter-spacing:1px;margin-bottom:12px}
+.step p{font-size:14px;color:var(--gray);line-height:1.7}
+
+/* COVERAGE */
+.coverage{background:var(--navy);padding:80px 5%}
+.coverage-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.coverage-map-placeholder{background:var(--navy-mid);border:1px solid rgba(201,162,39,.2);padding:40px;position:relative}
+.districts{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.district-tag{border:1px solid rgba(201,162,39,.3);color:var(--gold);padding:6px 14px;font-size:12px;letter-spacing:2px;font-family:'Oswald',sans-serif;text-transform:uppercase}
+
+/* INDUSTRIES */
+.industries{background:var(--navy-mid)}
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:60px}
+.ind-card{background:var(--navy);border:1px solid rgba(201,162,39,.12);padding:32px 20px;text-align:center;transition:all .3s}
+.ind-card:hover{border-color:var(--gold);background:rgba(201,162,39,.05)}
+.ind-icon{font-size:36px;margin-bottom:16px;display:block;color:var(--gold);opacity:.7}
+.ind-card span{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1.5px;color:var(--gray-light)}
+
+/* CONTACT */
+.contact{background:var(--navy-mid);position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;margin-top:60px}
+.contact-info{display:flex;flex-direction:column;gap:28px}
+.contact-detail{display:flex;gap:16px;align-items:flex-start}
+.cd-icon{width:44px;height:44px;border:1px solid rgba(201,162,39,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--gold)}
+.cd-label{font-size:11px;letter-spacing:2px;color:var(--gray);text-transform:uppercase;margin-bottom:4px}
+.cd-value{font-size:16px;color:var(--white);font-weight:400}
+.cd-value a{color:var(--gold);text-decoration:none}
+.form-wrap{background:var(--navy);border:1px solid rgba(201,162,39,.15);padding:40px}
+.form-title{font-family:'Oswald',sans-serif;font-size:22px;letter-spacing:2px;margin-bottom:8px}
+.form-sub{font-size:13px;color:var(--gold);margin-bottom:32px;letter-spacing:1px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:11px;letter-spacing:2px;color:var(--gray);text-transform:uppercase;margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(201,162,39,.2);color:var(--white);padding:14px 16px;font-family:'Source Sans 3',sans-serif;font-size:15px;outline:none;transition:border .3s;-webkit-appearance:none;appearance:none}
+.form-group select option{background:var(--navy-mid);color:var(--white)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{height:100px;resize:none}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-cta{font-size:12px;color:var(--gray);margin-top:16px;display:flex;align-items:center;gap:6px}
+.form-cta::before{content:'';width:20px;height:1px;background:var(--gray)}
+
+/* FOOTER */
+footer{background:#060912;border-top:1px solid rgba(201,162,39,.15);padding:48px 5% 32px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;margin-bottom:40px}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:3px;color:var(--gold);line-height:1;margin-bottom:6px}
+.footer-tagline{font-size:11px;letter-spacing:3px;color:var(--gray);text-transform:uppercase;margin-bottom:16px}
+.footer-desc{font-size:13px;color:var(--gray);line-height:1.7}
+.footer-head{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links li a{color:var(--gray);text-decoration:none;font-size:14px;transition:color .3s}
+.footer-links li a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-bottom p{font-size:12px;color:var(--gray)}
+.cin-badge{background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.2);padding:6px 14px;font-size:11px;color:var(--gold);letter-spacing:1px}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;align-items:center;gap:12px;background:var(--gold);color:var(--navy);padding:14px 22px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:1.5px;text-decoration:none;text-transform:uppercase;box-shadow:0 4px 20px rgba(201,162,39,.35);animation:float 3s ease-in-out infinite;transition:transform .3s}
+.wa-float:hover{transform:scale(1.05)!important}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.wa-dot{width:8px;height:8px;background:var(--navy);border-radius:50%}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:0}
+  .hero-img-side{display:none}
+  .about-grid,.contact-grid,.coverage-inner,.footer-top{grid-template-columns:1fr;gap:40px}
+  .why-grid{grid-template-columns:1fr;gap:24px}
+  .process-steps{grid-template-columns:1fr;gap:40px}
+  .process-steps::before{display:none}
+  .form-row{grid-template-columns:1fr}
+  .hero-stats{gap:28px}
+  nav .nav-cta .btn-outline{display:none}
+}
+@media(max-width:600px){
+  .trust-bar{gap:20px}
+  .services-grid{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">
+    <span>SRAKNOVA</span>
+    <span>Workforce Solution</span>
+  </div>
+  <div class="nav-cta">
+    <a href="#contact" class="btn-outline">Enquire Now</a>
+    <a href="tel:9507933579" class="btn-gold">&#128222; Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#9733; Jharkhand Registered &bull; Est. 2026</div>
+    <h1>Protecting<span>What Matters</span>Most</h1>
+    <div class="hero-line"></div>
+    <p class="hero-sub">Professional private security and workforce management solutions across Jharkhand. Trained personnel. 24x7 operations. Corporate-grade compliance.</p>
+    <div class="hero-ctas">
+      <a href="tel:9507933579" class="btn-gold">&#128222; Call: 9507933579</a>
+      <a href="https://wa.me/919507933579?text=Hello%2C%20I%20need%20security%20services%20from%20SRAKNOVA" class="btn-outline" target="_blank">&#128172; WhatsApp Us</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-num" data-target="24">24</span><span class="stat-label">Hour Operations</span></div>
+      <div class="stat-item"><span class="stat-num" data-target="6">6+</span><span class="stat-label">Districts Covered</span></div>
+      <div class="stat-item"><span class="stat-num" data-target="100">100%</span><span class="stat-label">Background Verified</span></div>
+      <div class="stat-item"><span class="stat-num" data-target="2">2hr</span><span class="stat-label">Response Time</span></div>
+    </div>
+  </div>
+  <div class="hero-img-side">
+    <div class="hero-img-frame">
+      <img src="https://res.cloudinary.com/ddam1v1kr/image/upload/q_auto/f_auto/c_scale,w_800/Navy_and_Gold_Modern_Security_Guard_Service_Banner_Landscape_bcst46.png" alt="SRAKNOVA Security Personnel — Professional Security Services Jharkhand" loading="eager">
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">&#9873;</span>MCA Registered Company</div>
+  <div class="trust-item"><span class="trust-icon">&#128737;</span>Trained & Verified Personnel</div>
+  <div class="trust-item"><span class="trust-icon">&#128336;</span>24x7 Operations</div>
+  <div class="trust-item"><span class="trust-icon">&#9989;</span>GST Ready &bull; Compliant</div>
+  <div class="trust-item"><span class="trust-icon">&#127981;</span>Corporate-Grade Service</div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-frame">
+        <div class="about-frame-inner">
+          <svg viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 10L180 40V120C180 165 145 200 100 220C55 200 20 165 20 120V40L100 10Z" stroke="#C9A227" stroke-width="2" fill="rgba(201,162,39,0.1)"/>
+            <circle cx="100" cy="85" r="28" fill="rgba(201,162,39,0.15)" stroke="#C9A227" stroke-width="1.5"/>
+            <path d="M100 130C72 130 50 148 50 160H150C150 148 128 130 100 130Z" fill="rgba(201,162,39,0.15)" stroke="#C9A227" stroke-width="1.5"/>
+            <path d="M80 120L95 135L125 100" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="frame-accent"></div>
+        <div class="frame-badge">2026<small>Est.</small></div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title">Trusted Security<br><em>Partners in Jharkhand</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub">SRAKNOVA Workforce Solution Private Limited is a Jharkhand-registered private security and workforce solutions company delivering professional, reliable, and responsive security services across the region.</p>
+      <div class="about-points">
+        <div class="about-point">
+          <div class="point-icon">&#127919;</div>
+          <div class="point-text"><h4>Our Mission</h4><p>To provide dependable, disciplined, and professionally managed security solutions that protect your people, assets, and operations — every hour of every day.</p></div>
+        </div>
+        <div class="about-point">
+          <div class="point-icon">&#128100;</div>
+          <div class="point-text"><h4>Leadership</h4><p>Founded by Atish Kumar and Ajay Kumar Mahato — experienced professionals with deep roots in Jharkhand's business and security landscape.</p></div>
+        </div>
+        <div class="about-point">
+          <div class="point-icon">&#9733;</div>
+          <div class="point-text"><h4>Regional Expertise</h4><p>Headquartered in Lohardaga with operational knowledge of Jharkhand's geography, local regulations, and unique security requirements.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div style="text-align:center;margin-bottom:0">
+    <div class="section-label" style="justify-content:center">What We Offer</div>
+    <h2 class="section-title">Our Security <em>Services</em></h2>
+    <p class="section-sub" style="margin:0 auto">Comprehensive security solutions engineered for businesses, institutions, and individuals across Jharkhand.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="svc-num">01</span>
+      <span class="svc-icon">&#128737;</span>
+      <h3 class="svc-title">Manned Guarding</h3>
+      <p class="svc-desc">Trained and uniformed security guards deployed at your premises with strict attendance, discipline, and reporting protocols.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="svc-num">02</span>
+      <span class="svc-icon">&#127981;</span>
+      <h3 class="svc-title">Industrial Security</h3>
+      <p class="svc-desc">Specialized security management for factories, warehouses, and industrial sites — protecting assets, restricting access, and preventing pilferage.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="svc-num">03</span>
+      <span class="svc-icon">&#127963;</span>
+      <h3 class="svc-title">Event Security</h3>
+      <p class="svc-desc">End-to-end event security planning and execution — crowd management, entry control, VIP protection, and emergency response.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="svc-num">04</span>
+      <span class="svc-icon">&#127968;</span>
+      <h3 class="svc-title">Residential Security</h3>
+      <p class="svc-desc">24x7 security for housing societies, gated communities, and residential complexes with round-the-clock coverage.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="svc-num">05</span>
+      <span class="svc-icon">&#128084;</span>
+      <h3 class="svc-title">Executive Protection</h3>
+      <p class="svc-desc">Discreet personal security for corporate executives, business leaders, and high-profile individuals requiring personal protection.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="svc-num">06</span>
+      <span class="svc-icon">&#128101;</span>
+      <h3 class="svc-title">Workforce Management</h3>
+      <p class="svc-desc">End-to-end security workforce solutions — recruitment, training, deployment, payroll management, and compliance support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="section-label">Why SRAKNOVA</div>
+  <h2 class="section-title">The Difference You <em>Can Feel</em></h2>
+  <p class="section-sub">Four pillars that set SRAKNOVA apart from every other security agency in the region.</p>
+  <div class="why-grid">
+    <div class="why-card reveal" data-num="01">
+      <div class="why-icon">&#127979;</div>
+      <h3>Locally Rooted, Regionally Deployed</h3>
+      <p>We understand Jharkhand — the geography, the regulations, the local dynamics. Every deployment is informed by genuine regional expertise, not generic SOPs.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-1" data-num="02">
+      <div class="why-icon">&#9989;</div>
+      <h3>100% Verified & Trained Personnel</h3>
+      <p>Every guard undergoes thorough background verification, physical assessment, and skills training before being deployed. Zero compromise on personnel quality.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2" data-num="03">
+      <div class="why-icon">&#128222;</div>
+      <h3>24x7 Control Room Support</h3>
+      <p>Round-the-clock monitoring and rapid incident response capability. When you call, we answer. When you need help, we respond within 2 hours.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-3" data-num="04">
+      <div class="why-icon">&#128196;</div>
+      <h3>Corporate-Grade Compliance</h3>
+      <p>MCA-registered company with CIN, fully compliant with the Private Security Agencies Regulation Act. GST-ready for corporate procurement and tendering.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process" id="process">
+  <div style="text-align:center">
+    <div class="section-label" style="justify-content:center">How It Works</div>
+    <h2 class="section-title">Three Steps to <em>Security</em></h2>
+  </div>
+  <div class="process-steps">
+    <div class="step reveal">
+      <div class="step-circle"><span class="step-num">01</span></div>
+      <h3>Send Your Enquiry</h3>
+      <p>Fill the contact form or call us directly. Tell us your location, type of security needed, and timeline.</p>
+    </div>
+    <div class="step reveal reveal-delay-1">
+      <div class="step-circle"><span class="step-num">02</span></div>
+      <h3>Site Assessment</h3>
+      <p>Our team visits your premises within 48 hours, conducts a security audit, and prepares a tailored security plan.</p>
+    </div>
+    <div class="step reveal reveal-delay-2">
+      <div class="step-circle"><span class="step-num">03</span></div>
+      <h3>Deploy & Monitor</h3>
+      <p>Trained personnel deployed as per the agreed plan. Ongoing monitoring, reporting, and 24x7 command support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="coverage" id="coverage">
+  <div class="coverage-inner">
+    <div class="reveal">
+      <div class="section-label">Coverage Area</div>
+      <h2 class="section-title">Serving <em>Jharkhand</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub">Currently deployed across key districts of Jharkhand with rapid expansion underway. Project-based deployments available across the state on request.</p>
+      <div class="districts">
+        <span class="district-tag">Lohardaga</span>
+        <span class="district-tag">Ranchi</span>
+        <span class="district-tag">Gumla</span>
+        <span class="district-tag">Simdega</span>
+        <span class="district-tag">Khunti</span>
+        <span class="district-tag">Latehar</span>
+        <span class="district-tag">+ On Request</span>
+      </div>
+    </div>
+    <div class="coverage-map-placeholder reveal reveal-delay-1" style="text-align:center;padding:60px 40px">
+      <svg viewBox="0 0 280 280" style="width:200px;height:200px;margin:0 auto 24px;display:block" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="140" cy="140" r="120" stroke="rgba(201,162,39,0.2)" stroke-width="1" stroke-dasharray="6 6"/>
+        <circle cx="140" cy="140" r="90" stroke="rgba(201,162,39,0.15)" stroke-width="1"/>
+        <circle cx="140" cy="140" r="60" stroke="rgba(201,162,39,0.1)" stroke-width="1"/>
+        <!-- Jharkhand-like shape simplified -->
+        <path d="M100 80L180 90L190 140L170 180L140 195L110 180L80 160L70 130L85 100Z" fill="rgba(201,162,39,0.08)" stroke="#C9A227" stroke-width="1.5"/>
+        <!-- Districts as dots -->
+        <circle cx="112" cy="150" r="5" fill="#C9A227"/>
+        <text x="118" y="154" fill="#C9A227" font-size="9" font-family="Oswald,sans-serif">Lohardaga</text>
+        <circle cx="148" cy="120" r="4" fill="rgba(201,162,39,0.6)"/>
+        <text x="154" y="124" fill="rgba(201,162,39,0.7)" font-size="8" font-family="Oswald,sans-serif">Ranchi</text>
+        <circle cx="115" cy="168" r="4" fill="rgba(201,162,39,0.6)"/>
+        <text x="121" y="172" fill="rgba(201,162,39,0.7)" font-size="8" font-family="Oswald,sans-serif">Gumla</text>
+      </svg>
+      <p style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;color:var(--gold);text-transform:uppercase">Operational Zone</p>
+      <p style="font-size:13px;color:var(--gray);margin-top:8px">Central &amp; Western Jharkhand</p>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div style="text-align:center">
+    <div class="section-label" style="justify-content:center">Sectors We Serve</div>
+    <h2 class="section-title">Security for Every <em>Industry</em></h2>
+  </div>
+  <div class="ind-grid">
+    <div class="ind-card reveal"><span class="ind-icon">&#127981;</span><span>Banks &amp; Finance</span></div>
+    <div class="ind-card reveal reveal-delay-1"><span class="ind-icon">&#127973;</span><span>Hospitals</span></div>
+    <div class="ind-card reveal reveal-delay-2"><span class="ind-icon">&#127968;</span><span>Malls &amp; Retail</span></div>
+    <div class="ind-card reveal"><span class="ind-icon">&#128296;</span><span>Industries</span></div>
+    <div class="ind-card reveal reveal-delay-1"><span class="ind-icon">&#127981;</span><span>Warehouses</span></div>
+    <div class="ind-card reveal reveal-delay-2"><span class="ind-icon">&#127963;</span><span>Construction Sites</span></div>
+    <div class="ind-card reveal"><span class="ind-icon">&#127968;</span><span>Residential</span></div>
+    <div class="ind-card reveal reveal-delay-1"><span class="ind-icon">&#127970;</span><span>Corporate Offices</span></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Request a Free <em>Assessment</em></h2>
+  <p class="section-sub">Tell us your security requirements. Our team will reach out within 2 hours.</p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-detail reveal">
+        <div class="cd-icon">&#128222;</div>
+        <div><div class="cd-label">Call Director</div><div class="cd-value"><a href="tel:9507933579">9507933579</a> — Atish Kumar</div></div>
+      </div>
+      <div class="contact-detail reveal reveal-delay-1">
+        <div class="cd-icon">&#128222;</div>
+        <div><div class="cd-label">Call Director</div><div class="cd-value"><a href="tel:8797343090">8797343090</a> — Ajay Kumar Mahato</div></div>
+      </div>
+      <div class="contact-detail reveal reveal-delay-2">
+        <div class="cd-icon">&#128172;</div>
+        <div><div class="cd-label">WhatsApp</div><div class="cd-value"><a href="https://wa.me/919507933579" target="_blank">Chat on WhatsApp</a></div></div>
+      </div>
+      <div class="contact-detail reveal">
+        <div class="cd-icon">&#9993;</div>
+        <div><div class="cd-label">Email</div><div class="cd-value"><a href="mailto:sraksecurities@outlook.com">sraksecurities@outlook.com</a></div></div>
+      </div>
+      <div class="contact-detail reveal reveal-delay-1">
+        <div class="cd-icon">&#128205;</div>
+        <div><div class="cd-label">Office Address</div><div class="cd-value">C/O Atish Kumar, Jail Khana Road, Kutum, Lohardaga Bazar, Jharkhand — 835302</div></div>
+      </div>
+      <div style="margin-top:12px;padding:20px;background:rgba(201,162,39,.08);border-left:3px solid var(--gold)" class="reveal">
+        <p style="font-size:13px;color:var(--gray-light);line-height:1.7;margin-bottom:8px">Response Time: <strong style="color:var(--gold)">Within 2 Hours</strong></p>
+        <p style="font-size:13px;color:var(--gray-light);line-height:1.7">Operations: <strong style="color:var(--gold)">24 Hours × 7 Days</strong></p>
+      </div>
+    </div>
+    <div class="form-wrap reveal reveal-delay-1">
+      <h3 class="form-title">FREE SECURITY CONSULTATION</h3>
+      <p class="form-sub">&#9733; Our team responds within 2 hours</p>
+      <div class="form-row">
+        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+        <div class="form-group"><label>Organisation</label><input type="text" placeholder="Company / Entity name"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Contact Number</label><input type="tel" placeholder="Your phone number"></div>
+        <div class="form-group"><label>City</label><input type="text" placeholder="Your city"></div>
+      </div>
+      <div class="form-group">
+        <label>Type of Security Required</label>
+        <select>
+          <option value="">-- Select Service --</option>
+          <option>Manned Guarding</option>
+          <option>Industrial Security</option>
+          <option>Event Security</option>
+          <option>Residential Security</option>
+          <option>Executive Protection</option>
+          <option>Workforce Management</option>
+          <option>Other / Custom Requirement</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Your Requirement</label><textarea placeholder="Briefly describe your security requirement, location, and approximate number of guards needed..."></textarea></div>
+      <a href="https://wa.me/919507933579?text=Hello%2C%20I%20need%20security%20services%20from%20SRAKNOVA.%20Please%20contact%20me." target="_blank" class="btn-gold" style="width:100%;justify-content:center;font-size:15px;padding:16px">Send Enquiry via WhatsApp &#8594;</a>
+      <p class="form-cta">Or call directly: 9507933579 / 8797343090</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">SRAKNOVA</div>
+      <div class="footer-tagline">Workforce Solution Pvt Ltd</div>
+      <p class="footer-desc">Professional private security and workforce management solutions serving businesses and institutions across Jharkhand. Registered under the Ministry of Corporate Affairs, India.</p>
+    </div>
+    <div>
+      <div class="footer-head">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#why">Why SRAKNOVA</a></li>
+        <li><a href="#coverage">Coverage Area</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-head">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:9507933579">&#128222; 9507933579</a></li>
+        <li><a href="tel:8797343090">&#128222; 8797343090</a></li>
+        <li><a href="https://wa.me/919507933579" target="_blank">&#128172; WhatsApp</a></li>
+        <li><a href="mailto:sraksecurities@outlook.com">&#9993; sraksecurities@outlook.com</a></li>
+        <li><a href="#coverage">&#128205; Lohardaga, Jharkhand</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 SRAKNOVA Workforce Solution Private Limited. All rights reserved. | Lohardaga, Jharkhand</p>
+    <div class="cin-badge">CIN: U80100JH2026PTC&#8202;&#9679;&#8202;ROC Ranchi</div>
+  </div>
+</footer>
+
+<!-- FLOATING WA BUTTON -->
+<a href="https://wa.me/919507933579?text=Hello%2C%20I%20need%20security%20services%20from%20SRAKNOVA" target="_blank" class="wa-float">
+  <span class="wa-dot"></span>
+  WhatsApp Us
+</a>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
